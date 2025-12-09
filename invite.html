@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moana Invitation</title>
+<style>
+body {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('moana.jpg');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+.box {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Aloha, <span id="guest"></span>! 🌺</h2>
+<p>You are invited to the Dedication & 1st Birthday of</p>
+<h1>Baby Zaraiah R. Janeo</h1>
+<p>📅 January 6, 2026<br>
+🕒 11:00 AM<br>
+📍 Brgy Old Sagay, Prk Camatique B, Sitio Dasuk</p>
+<p>🌊 Join us and let's celebrate! 🌴</p>
+</div>
+
+<script>
+const url = new URL(window.location.href);
+document.getElementById('guest').textContent = url.searchParams.get("name") || "Guest";
+</script>
+</body>
+</html>
